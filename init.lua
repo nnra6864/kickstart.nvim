@@ -49,8 +49,13 @@ vim.cmd [[
     autocmd ColorScheme * highlight TabLineFill guibg=none
     autocmd ColorScheme * highlight TabLineSel guibg=none
     autocmd ColorScheme * highlight Visual guibg=none
-  augroup END
-]]
+    augroup END
+    augroup MyHighlightOverrides
+    autocmd!
+    autocmd ColorScheme * highlight CursorLine guibg=NONE
+    autocmd ColorScheme * highlight StatusLine guibg=NONE
+    augroup END
+  ]]
 
 -- Set tab to 4 if vim-sleuth sets it to 8
 vim.api.nvim_create_autocmd('FileType', {
@@ -299,7 +304,7 @@ require('lazy').setup({
       require('lualine').setup {
         options = {
           icons_enabled = true,
-          theme = 'auto',
+          theme = require('transparent_lualine').theme(),
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
           disabled_filetypes = {
