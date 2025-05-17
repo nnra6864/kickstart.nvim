@@ -179,6 +179,7 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
+local themes = require 'themes'
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
@@ -423,6 +424,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+      vim.keymap.set('n', '<leader>sc', builtin.colorscheme, { desc = '[S]elect [C]olorscheme' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
       -- Slightly advanced example of overriding default behavior and theme
@@ -872,15 +874,7 @@ require('lazy').setup({
   },
 
   -- Color Schemes
-  { 'shaunsingh/nord.nvim' },
-  { 'oxfist/night-owl.nvim' },
-  { 'catppuccin/nvim' },
-  { 'rose-pine/neovim' },
-  { 'Mofiqul/dracula.nvim' },
-  { 'kdheepak/monochrome.nvim' },
-  { 'folke/tokyonight.nvim' },
-  { 'ellisonleao/gruvbox.nvim' },
-  { 'bhrown/brown.vim' },
+  unpack(themes),
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -995,9 +989,6 @@ require('lazy').setup({
     },
   },
 })
-
--- Apply Color Scheme
---vim.cmd.colorscheme 'nord'
 
 -- Setup Dynamic Theme
 require('dynamic_theme').setup()
