@@ -711,6 +711,10 @@ require('lazy').setup({
           },
         },
       }
+
+      require('lspconfig').qmlls.setup {
+        cmd = { 'qmlls6', '-E' },
+      }
     end,
   },
 
