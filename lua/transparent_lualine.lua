@@ -2,34 +2,34 @@ local M = {}
 M.theme = function()
 	return {
 		inactive = {
-			a = { fg = "#D8DED3", bg = "#4C5843", gui = "bold" },
-			b = { fg = "#D8DED3", bg = "#5A6A50" },
-			c = { fg = "#D8DED3", bg = nil },
+			a = { fg = "#A3C5CC", bg = "#081D26", gui = "bold" },
+			b = { fg = "#A3C5CC", bg = "#0C2E3F" },
+			c = { fg = "#A3C5CC", bg = nil },
 		},
 		visual = {
-			a = { fg = "#D8DED3", bg = "#C4B550", gui = "bold" },
-			b = { fg = "#D8DED3", bg = "#5A6A50" },
-			c = { fg = "#D8DED3", bg = nil },
+			a = { fg = "#A3C5CC", bg = "#1F5A66", gui = "bold" },
+			b = { fg = "#A3C5CC", bg = "#0C2E3F" },
+			c = { fg = "#A3C5CC", bg = nil },
 		},
 		replace = {
-			a = { fg = "#D8DED3", bg = "#4C5844", gui = "bold" },
-			b = { fg = "#D8DED3", bg = "#5A6A50" },
-			c = { fg = "#D8DED3", bg = nil },
+			a = { fg = "#A3C5CC", bg = "#661F1F", gui = "bold" },
+			b = { fg = "#A3C5CC", bg = "#0C2E3F" },
+			c = { fg = "#A3C5CC", bg = nil },
 		},
 		normal = {
-			a = { fg = "#D8DED3", bg = "#4C5843", gui = "bold" },
-			b = { fg = "#D8DED3", bg = "#5A6A50" },
-			c = { fg = "#D8DED3", bg = nil },
+			a = { fg = "#A3C5CC", bg = "#081D26", gui = "bold" },
+			b = { fg = "#A3C5CC", bg = "#0C2E3F" },
+			c = { fg = "#A3C5CC", bg = nil },
 		},
 		insert = {
-			a = { fg = "#4C5843", bg = "#5A6A50", gui = "bold" },
-			b = { fg = "#D8DED3", bg = "#5A6A50" },
-			c = { fg = "#D8DED3", bg = nil },
+			a = { fg = "#081D26", bg = "#1F6628", gui = "bold" },
+			b = { fg = "#A3C5CC", bg = "#0C2E3F" },
+			c = { fg = "#A3C5CC", bg = nil },
 		},
 		command = {
-			a = { fg = "#4C5843", bg = "#958831", gui = "bold" },
-			b = { fg = "#D8DED3", bg = "#5A6A50" },
-			c = { fg = "#D8DED3", bg = nil },
+			a = { fg = "#081D26", bg = "#66661F", gui = "bold" },
+			b = { fg = "#A3C5CC", bg = "#0C2E3F" },
+			c = { fg = "#A3C5CC", bg = nil },
 		},
 	}
 end
