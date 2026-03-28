@@ -17,12 +17,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 
 ---@type vim.Option
-local rtp = vim.opt.rtp
-rtp:prepend(lazypath)
+vim.opt.rtp:prepend(lazypath)
 
 local themes = require 'themes'
 require('lazy').setup({
   { import = 'plugins' },
+  { import = 'kickstart/plugins' },
 
   -- Color Schemes
   unpack(themes),
