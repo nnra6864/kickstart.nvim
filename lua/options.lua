@@ -19,6 +19,12 @@ vim.opt.smarttab = true
 vim.opt.autoindent = true
 vim.opt.expandtab = true
 
+-- Detect BOM correctly(avoids big git diffs)
+vim.opt.fileencodings = 'ucs-bom,utf-8,default,latin1'
+
+-- Detect correct line endings(avoids big git diffs)
+vim.opt.fileformats = 'unix,dos'
+
 -- Enable break indent
 vim.o.breakindent = true
 
