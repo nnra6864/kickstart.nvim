@@ -119,6 +119,7 @@ return {
       clangd = {},
       pyright = {},
       stylua = {},
+      tinymist = {},
 
       qmlls = {
         cmd = { 'qmlls6', '-E' },
