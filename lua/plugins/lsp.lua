@@ -165,6 +165,7 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua',
       'roslyn',
+      'tinymist',
     })
 
     require('mason-tool-installer').setup {
