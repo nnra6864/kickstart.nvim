@@ -6,6 +6,10 @@ map('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]ui
 -- Copy to global clipboard
 map({ 'n', 'i', 'v' }, '<C-S-c>', '"+y', { desc = 'Copy to clipboard' })
 
+-- Split
+map('n', '<leader>|', '<C-w><C-v>', { desc = 'Split window vertically' })
+map('n', '<leader>-', '<C-w><C-s>', { desc = 'Split window horizontally' })
+
 -- Move focus
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus left' })
 map('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus right' })
